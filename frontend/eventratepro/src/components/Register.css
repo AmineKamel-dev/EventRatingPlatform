@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Logo header for authentication pages */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.center-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(184, 243, 248));
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.register-page p {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.ip {
+  display: flex;
+  justify-content: center;
+}
+
+.wn {
+  padding-top: 20px;
+}
+
+.register-page h1 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #8af6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.email,
+.n-text,
+.p-text,
+.c-text {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Inter;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.reginfor {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.register {
+  display: block;
+  margin: 50px auto 0;
+  background-color: rgb(138, 246, 255);
+  color: black;
+  width: 100%;
+  max-width: 300px;
+  height: 49px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: Inter;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.register:hover {
+  background-color: rgb(118, 226, 235);
+}
+
+/* Role Selection Styles */
+.role-selection {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Inter;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.role-selection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.role-selection p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.role-button {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 25px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Inter;
+  text-align: center;
+}
+
+.role-button:hover {
+  border-color: rgb(138, 246, 255);
+  background-color: rgba(138, 246, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.role-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.role-button h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.role-button p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.role-button.organizer:hover {
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.role-button.referee:hover {
+  border-color: #2196F3;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.loading-message {
+  font-family: Inter;
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .center-logo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .center-logo {
+    width: 170px;
+    height: 170px;
+  }
+  
+  .register-page p {
+    font-size: 20px;
+  }
+  
+  .title {
+    margin-top: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ip {
+    justify-content: flex-end;
+  }
+  
+  .reginfor {
+    margin-top: 100px;
+    max-width: 500px;
+    padding: 0;
+  }
+  
+  .email,
+  .n-text,
+  .p-text,
+  .c-text {
+    max-width: 500px;
+    margin-bottom: 15px;
+  }
+  
+  .register {
+    margin: 70px auto 0;
+    font-size: 20px;
+    max-width: 294px;
+  }
+  
+  .role-selection {
+    margin-top: 100px;
+    padding: 0;
+  }
+  
+  .role-selection h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .role-selection p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .role-buttons {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .role-button {
+    padding: 30px 25px;
+    width: 250px;
+  }
+  
+  .role-button h3 {
+    font-size: 24px;
+  }
+  
+  .role-button p {
+    font-size: 16px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .register-page {
+    padding: 40px;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1200px) {
+  .title {
+    max-width: 1000px;
+  }
+} 

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Back button positioned independently */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2C3E50;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-family: Inter;
+  z-index: 10;
+}
+
+.back-arrow:hover {
+  background-color: rgba(138, 246, 255, 0.3);
+}
+
+/* Logo header - perfectly centered */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.center-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.questionnaire-page {
+  height: 100vh;
+  background: linear-gradient(180deg, #fff, #b8f3f8);
+  position: relative;
+  padding: 40px 20px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.title .icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.title h1 {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.questionnaires-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.questionnaire-card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.questionnaire-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.delete-x {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.delete-x:hover {
+  color: #ff4444;
+}
+
+/* Toast Notification Styles */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast-notification.success {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  color: white;
+}
+
+.toast-notification.error {
+  background: linear-gradient(135deg, #f44336, #ef5350);
+  color: white;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.toast-icon {
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.questionnaire-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionnaire-card:nth-child(1) .questionnaire-icon {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border: 3px solid #2196f3;
+}
+
+.questionnaire-card:nth-child(2) .questionnaire-icon {
+  background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+  border: 3px solid #4caf50;
+}
+
+.questionnaire-card:nth-child(3) .questionnaire-icon {
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+  border: 3px solid #9c27b0;
+}
+
+.questionnaire-card h3 {
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.create-new-button {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  height: 60px;
+  background: #8af6ff;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: Inter;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.create-new-button:hover {
+  background: #6be0eb;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .center-logo {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .logo-header {
+    padding: 20px 0;
+    margin-bottom: 10px;
+  }
+  
+  .questionnaires-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .questionnaire-card {
+    width: 250px;
+  }
+} 

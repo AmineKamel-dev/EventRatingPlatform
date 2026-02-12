@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Main Page Layout */
+.pdf-export-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(184, 243, 248));
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Back Arrow */
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.back-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Modern Header */
+.pdf-export-header {
+  margin: 80px 0 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 24px 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Main Content */
+.pdf-export-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.pdf-export-left {
+  flex: 2;
+  min-width: 0;
+}
+
+.pdf-export-right {
+  flex: 1;
+  min-width: 400px;
+}
+
+/* Section Headers */
+.section-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin: 0 0 8px 0;
+}
+
+.section-icon {
+  font-size: 28px;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.section-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4dd0fa, #26c6da);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(77, 208, 250, 0.3);
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 14px;
+}
+
+/* QR Codes Grid */
+.qr-codes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.qr-code-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.qr-code-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.qr-code-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.qr-index {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.qr-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin: 0;
+  flex: 1;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.qr-code-footer {
+  text-align: center;
+}
+
+.qr-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4CAF50, #66bb6a);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Empty States */
+.empty-state {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.empty-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin: 0 0 12px 0;
+}
+
+.empty-description {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Referee List Card */
+.referee-list-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.referee-list-header {
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.referee-list-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.list-icon {
+  font-size: 20px;
+}
+
+.referee-list-content {
+  padding: 24px;
+}
+
+.referee-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.referee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.referee-item:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.referee-avatar {
+  font-size: 20px;
+  color: #4dd0fa;
+}
+
+.referee-email {
+  flex: 1;
+  font-size: 16px;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+.referee-status {
+  font-size: 16px;
+  color: #4CAF50;
+}
+
+/* Referee Empty State */
+.referee-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.referee-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.referee-empty-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.referee-empty-hint {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+/* Download Section */
+.download-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.download-info {
+  margin-bottom: 24px;
+}
+
+.download-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin: 0 0 8px 0;
+}
+
+.download-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.download-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #4dd0fa, #26c6da);
+  color: #000;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(77, 208, 250, 0.3);
+  font-family: inherit;
+  margin-bottom: 16px;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #26c6da, #00bcd4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(77, 208, 250, 0.4);
+}
+
+.download-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.download-btn.generating {
+  background: linear-gradient(135deg, #a0a0a0, #888);
+  color: #fff;
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.download-requirements {
+  padding: 16px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 12px;
+}
+
+.requirements-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #856404;
+  margin: 0;
+  font-weight: 500;
+}
+
+.requirements-icon {
+  font-size: 16px;
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast-notification.success {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  color: white;
+}
+
+.toast-notification.error {
+  background: linear-gradient(135deg, #f44336, #ef5350);
+  color: white;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.toast-icon {
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pdf-export-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .pdf-export-right {
+    min-width: auto;
+  }
+  
+  .qr-codes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-export-page {
+    padding: 15px;
+  }
+  
+  .back-arrow {
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+  .pdf-export-header {
+    margin: 60px 0 30px 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .header-subtitle {
+    font-size: 14px;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .section-header {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .section-description {
+    font-size: 14px;
+  }
+  
+  .qr-codes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .qr-code-card {
+    padding: 20px;
+  }
+  
+  .referee-list-content {
+    padding: 20px;
+  }
+  
+  .download-section {
+    padding: 20px;
+  }
+  
+  .download-btn {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 16px 20px;
+  }
+  
+  .section-header {
+    padding: 16px;
+  }
+  
+  .qr-code-card {
+    padding: 16px;
+  }
+  
+  .referee-list-header {
+    padding: 16px 20px;
+  }
+  
+  .referee-list-content {
+    padding: 16px;
+  }
+  
+  .download-section {
+    padding: 16px;
+  }
+} 
